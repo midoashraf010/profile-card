@@ -1,0 +1,117 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark-cyan: hsl(185, 75%, 39%);
+  --saturated-color: hsl(229, 23%, 23%);
+  --gray: hsl(227, 10%, 46%);
+  --shadow: hsl(227, 10%, 46%, 50%);
+  --neutral: hsl(0, 0%, 59%);
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--dark-cyan);
+  overflow: hidden;
+  user-select: none;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+}
+.body::after {
+  content: "";
+  background-image: url(./images/bg-pattern-top.svg);
+  position: absolute;
+  background-size: 800px;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  left: -15rem;
+  top: -15rem;
+  z-index: -50;
+}
+.body::before {
+  content: "";
+  background-image: url(./images/bg-pattern-bottom.svg);
+  position: absolute;
+  background-size: 800px;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -50;
+  right: -40rem;
+  top: 25rem;
+}
+.container {
+  width: 400px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: var(--saturated-color);
+  box-shadow: 0px 0px 50px 0px var(--shadow);
+}
+.container p {
+  font-weight: 400;
+  color: var(--neutral);
+}
+.container .info {
+  margin-top: -2rem;
+}
+.container .name {
+  display: inline-block;
+  position: relative;
+}
+.container .age {
+  color: var(--gray);
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.container .image1 {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  align-self: stretch;
+}
+.container .vic {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  position: relative;
+  top: -50px;
+  outline: 5px solid var(--white);
+}
+.container .info p {
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.container .stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
